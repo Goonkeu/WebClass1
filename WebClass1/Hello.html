@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    
+    <input id="help" type="button" style="float: right;" value="도움말" onclick="
+        alert('창의 가로 크기를 800px이상으로 해주세요')">
+    
+    
+        <h1><a href="Home.html">포트폴리오</a></h1>
+
+    <div id="grid">
+        
+        
+            <ul>
+                <script>
+                    var Plist = ['Home.html', 'Hello.html', 'Story.html', 'Aimed.html'];
+                    var Klist = ['홈', '내 정보', '내 이야기', '내 목표'];
+                    var i = 0;
+                    var path = window.location.pathname;
+                    var ary = path.split('/');
+                    // Aimed.html
+                    var currentFileName = 'Hello.html';
+                    console.log(window.location.pathname);
+                    while(i < Plist.length){
+                        if (Plist[i] === currentFileName) {
+                            document.write('<li><a style="color:red;text-decoration:underline" href="file:///C:/Users/Kenny%20GK/Desktop/WebDev/WebClass1/'+Plist[i]+'">'+Klist[i]+'</a></li>');
+                        } else {
+                            document.write('<li><a href="file:///C:/Users/Kenny%20GK/Desktop/WebDev/WebClass1/'+Plist[i]+'">'+Klist[i]+'</a></li>');
+                        }
+                        i = i + 1;
+                    }
+                </script>
+            </ul>
+        
+        
+        <div id="contents">
+            <p>2103095 정희재</p>
+          <h2>내 정보</h2>
+          <table  width ="500" height="300" >
+                <tr style="border: 10px;"><!--첫번째줄-->
+                    <td>출생년도</td>
+                    <td>1998년 6월 2일</td>
+                </tr>
+                <tr style="border: 100px;"><!--두번째줄-->
+                    <td>출생지</td>
+                    <td>전라북도 전주시</td>
+
+                </tr>
+                <tr style="border: 100px;"><!--세번째줄-->
+                    <td>취미</td>
+                    <td>음악듣기, 게임, 미식축구, 자전거, 여행, 커스텀키보드</td> 
+                </tr>
+                <tr style="border: 100px;"> <!--네번째줄-->
+                    <td>학력</td>
+                    <td>
+                        전주서천초등학교
+                        <br>전주서중학교
+                        <br>전주한일고등학교
+                        <br>호원대학교 컴퓨터게임학과
+                        <br>(편입)-> 군산대학교 컴퓨터정보공학과
+                    </td>
+                </tr>
+            </table>
+
+            <a href="Home.html" class="previous">&laquo; Previous</a>
+            <a href="Story.html" class="next">Next &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>
