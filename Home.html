@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    
+    <input id="help" type="button" style="float: right;" value="도움말" onclick="
+        alert('창의 가로 크기를 800px이상으로 해주세요')">
+    
+    
+        <h1><a href="Home.html">포트폴리오</a></h1>
+
+    <div id="grid">
+      <ul>
+        <script>
+          var Plist = ['Home.html', 'Hello.html', 'Story.html', 'Aimed.html'];
+          var Klist = ['홈', '내 정보', '내 이야기', '내 목표'];
+          var i = 0;
+          var path = window.location.pathname;
+          var ary = path.split('/');
+          // Aimed.html
+          var currentFileName = 'Home.html';
+          console.log(window.location.pathname);
+          while(i < Plist.length){
+              if (Plist[i] === currentFileName) {
+                  document.write('<li><a style="color:red;text-decoration:underline" href="file:///C:/Users/Kenny%20GK/Desktop/WebDev/WebClass1/'+Plist[i]+'">'+Klist[i]+'</a></li>');
+              } else {
+                  document.write('<li><a href="file:///C:/Users/Kenny%20GK/Desktop/WebDev/WebClass1/'+Plist[i]+'">'+Klist[i]+'</a></li>');
+              }
+              i = i + 1;
+          }
+      </script>
+      </ul>
+        
+        <div id="contents">
+            <p><img src="home1.PNG" width="100%"></p>
+
+            
+            <a href="Hello.html" class="next">Next &raquo;</a>
+
+        </div>
+    </div>
+</body>
+</html>
